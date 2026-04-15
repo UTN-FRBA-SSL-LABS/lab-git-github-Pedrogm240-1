@@ -692,7 +692,7 @@ RESPUESTA_P7=
 - [ ] Preguntas P1–P7 respondidas en este archivo
 - [ ] Todo pusheado a `main`
 
-### Verificación local con `make test`
+### Verificación local
 
 A lo largo del laboratorio vas a hacer muchos commits. **No necesitás hacer push para verificar tu progreso**: tenés disponible un script local que corre los mismos checks que el corrector automático, directamente en tu máquina:
 
@@ -725,21 +725,20 @@ El script verifica los 21 checks, incluyendo los de PRs y branches remotas. Para
 
 Una vez autenticado con `gh auth login`, `make test` puede verificar el 100% de los checks localmente.
 
-**Flujo recomendado:** hacé commits seguido a medida que avanzás, corré `make test` para ver tu puntaje, y dejá el push para cuando hayas terminado una parte completa del laboratorio.
+**Flujo recomendado:** hacé commits frecuentes mientras avanzás, usá `make test` para verificar tu progreso, y dejá el push para cuando una parte esté realmente lista.
 
-### Corrección automática en la nube
+### Corrección automática
 
-Cuando hacés `git push` con cambios en `operaciones.c` o `readme.md`, GitHub ejecuta automáticamente un **workflow de corrección** que corre los mismos checks en la nube y calcula tu puntaje oficial.
+Cuando pusheás cambios en `operaciones.c` o `readme.md`, GitHub ejecuta el workflow de corrección que valida los mismos checks y calcula tu puntaje oficial.
 
-> ⚠️ **Usá `make test` antes de pushear.** Cada ejecución del workflow consume tiempo de cómputo en servidores de GitHub — un recurso compartido. El workflow además solo se activa cuando modificás `operaciones.c` o `readme.md`, que son los archivos del lab. Para el resto de los casos, `make test` te muestra exactamente los mismos resultados en tu terminal sin costo. Reservá el push para cuando una parte esté realmente lista.
+> ⚠️ **Evitá pushes innecesarios.** Cada ejecución consume cómputo en servidores de GitHub — un recurso compartido. `make test` te da el mismo resultado en tu terminal sin costo.
 
-Para ver los resultados del workflow:
+Para ver los resultados:
 
 1. Entrá a tu repositorio en GitHub
 2. Hacé click en la pestaña **Actions**
-3. Vas a ver la lista de ejecuciones — la más reciente corresponde a tu último push
-4. Hacé click en esa ejecución → luego en el job **Autograding**
-5. Al final del job, en el paso **Calcular puntaje**, vas a ver una tabla con el resultado de cada check y el puntaje total
+3. Hacé click en la ejecución más reciente → job **Autograding**
+4. Al final del job vas a ver la tabla con el resultado de cada check y el puntaje total
 
 También podés ver un resumen rápido: en la pestaña **Code**, junto a cada commit aparece un ícono ✅ (todos los checks pasaron) o ❌ (alguno falló). Hacé click en ese ícono para ver el detalle.
 
