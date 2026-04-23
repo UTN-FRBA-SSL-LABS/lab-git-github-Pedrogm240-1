@@ -3,7 +3,7 @@
 /* ── sumar — ya implementada, referencia de estilo ───────────────────────── */
 
 int esPar(int n) {
-    return (n % 2) == 0; /* version main */
+    return (n % 2) == 0;
 }
 
 /* ── restar — ya implementada ────────────────────────────────────────────── */
