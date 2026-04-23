@@ -1,9 +1,8 @@
 #include "operaciones.h"
 
 /* ── sumar — ya implementada, referencia de estilo ───────────────────────── */
-
-int esPar(int n) {
-    return (n % 2) == 0;
+int sumar(int c, int d) {
+    return c + d;
 }
 
 /* ── restar — ya implementada ────────────────────────────────────────────── */
