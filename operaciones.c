@@ -2,8 +2,8 @@
 
 /* ── sumar — ya implementada, referencia de estilo ───────────────────────── */
 
-int sumar(const int c, const int d) {
-    return c + d;
+int esPar(int n) {
+    return (n % 2) == 0; /* version main */
 }
 
 /* ── restar — ya implementada ────────────────────────────────────────────── */
